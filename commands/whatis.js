@@ -9,7 +9,8 @@ module.exports = class Whatis extends Command {
 	}
 
 	static action(message) {
-		if (message.content.startsWith('d?whatis front-end')) {
+		let content = message.content.toLowerCase();
+		if (content.startsWith('d?whatis front-end')) {
 
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
@@ -17,7 +18,7 @@ module.exports = class Whatis extends Command {
 		.setFooter('Les meilleures définitions de DevBot')
 		message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?whatis back-end')) {
+		} else if(content.startsWith('d?whatis back-end')) {
 
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
@@ -25,7 +26,7 @@ module.exports = class Whatis extends Command {
 		.setFooter('Les meilleures définitions de DevBot')
 		message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?whatis full-stack')) {
+		} else if(content.startsWith('d?whatis full-stack')) {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
