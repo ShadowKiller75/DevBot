@@ -1,7 +1,7 @@
 module.exports = class command {
 
 	static parse(message) {
-		this.match(message) ? (this.action(message), return true): return false;
+		return this.match(message);
 	}
 
 	static match(message) {
