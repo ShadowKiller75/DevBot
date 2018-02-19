@@ -4,7 +4,7 @@ const Command = require('./command')
 module.exports = class Whatis extends Command {
 
 	static match(message) {
-		let content = message.toLowerCase();
+		let content = message.content.toLowerCase();
 		return content.startsWith('d?whatis')
 	}
 
