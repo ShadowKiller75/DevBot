@@ -14,21 +14,14 @@ bot.on('ready', function() {
 })
 
 
-//guildMemberAdd
+//guildMemebrAdd
 bot.on('guildMemberAdd', function(member) {
 
-	member.guild.channels.find("name", "general").sendMessage({embed: {
-			color: 226666,
-			fields: [{
-				name: 'Bienvenue dans le serveur ' + '**' + member.guild.name + '** !',
-				value:  'Bienvenue parmis nous ! ' + member.toString() + ' *n\'oubliez de lire le #reglement*'
-			}],
-		}
-	})
+	member.guild.channels.find("name", "general").sendMessage(member.toString() + ' Bienvenue dans le serveur ' + '**' + member.guild.name + '**' + ' utilisez la commande d?all_roles pour les roles que vous souhaitez ajouter, *__n\'oubliez pas de lire le reglement__*');
+
 	member.addRole(member.guild.roles.find("name", "Membre"));
 
 })
-
 
 
 //Message
@@ -44,7 +37,14 @@ bot.on('message', function(message) {
 
 	Docs.parse(message)
 
-	if(message.content === 'd?stats') {
+	if(message.content === 'd?help') {
+
+		var embed = new Discord.RichEmbed()
+		.setColor("#226666")
+		.addField("Toutes les commandes du bot", "d?google\nFaire une recherche google et obtenir le lien de la recherche\n\nd?stats\nToutes les informations a savoir sur le serveur\n\nd?blague\nLe bot t'affiche une blague\n\nd?role -[ex: dev]\nCommande qui permet d'ajouter un role pour voir tous les roles dispos entrer la commande d?all_roles\n\nd?all_roles\nCommande qui permet d'afficher tous les roles disponibles\n\nd?whatis [front-end, back-end ou full-stack]\nCommande qui permet de savoir la signification de front-end, back-end ou full-stack\n\nd?game [phrase pour savoir si elle est vraie ou fausse\nCommande pour lancer le jeu vrai ou faux\n\nd?gitdevbot\nCommande qui permet d'obtenir le lien du github du bot\n\nd?apropos\nCommande pour connaitre quelques informations a propos du bot\n\nd?doc\nCommande qui permet d'obtenir le lien de docs de languages de programmation (ou pas)")
+		.message.channel.send(embed).catch(console.error)
+
+	} else if(message.content === 'd?stats') {
 
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
@@ -88,10 +88,15 @@ bot.on('message', function(message) {
 			.setFooter('A propos du bot')
 			message.channel.send(embed).catch(console.error)
 		
-	} 
+	} else if(message.content.startsWith('quelqu\'un connait')) {
+		message.reply('Ca ne sert a rien de demander si quelqu\'un sait telle chose, expliquez clairement votre problème')
+	} else if(message.content.startsWith('quelqu\'un sait')) {
+		message.reply('Ca ne sert a rien de demander si quelqu\'un sait telle chose, expliquez clairement votre problème')
+	} else if(message.content.startsWith('vous savez')) {
+		message.reply('Ca ne sert a rien de demander si quelqu\'un sait telle chose, expliquez clairement votre problème')
+	}
 	
 })
-
 
 
 bot.login(process.env.TOKEN);
