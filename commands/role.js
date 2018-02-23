@@ -55,9 +55,9 @@ module.exports = class Role extends Command {
 			.addField("Role Gamer", "Role Gamer ajouté avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?role -journaliste')) {
+		} else if(message.content.startsWith('d?role -redacteur')) {
 
-			message.member.addRole(message.member.guild.roles.find('name', 'Journaliste'));
+			message.member.addRole(message.member.guild.roles.find('name', 'Rédacteur'));
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
