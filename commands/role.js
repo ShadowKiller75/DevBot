@@ -61,7 +61,7 @@ module.exports = class Role extends Command {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
-			.addField("Role Journaliste", "Role Journaliste ajouté avec succès")
+			.addField("Role Rédacteur", "Role Rédacteur ajouté avec succès")
 			message.channel.send(embed)
 
 		} else if(message.content.startsWith('d?role -frontend')) {
