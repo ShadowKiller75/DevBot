@@ -10,7 +10,7 @@ const Docs = require('./commands/docs')
 
 bot.on('ready', function() {
 	console.log('Bot connecté')
-	bot.user.setGame('coder du sale').catch(console.error)
+	bot.user.setGame('coder du sale | d?help').catch(console.error)
 })
 
 
