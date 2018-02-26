@@ -92,10 +92,7 @@ bot.on('message', function(message) {
 			.setFooter('A propos du bot')
 			message.channel.send(embed).catch(console.error)
 		
-	} else if(message.content === 'd?online_members') {
-		  
-		
-	}
+	} 
  	
 });
 
