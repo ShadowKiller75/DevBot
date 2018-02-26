@@ -84,17 +84,11 @@ bot.on('message', function(message) {
 
 		var embed = new Discord.RichEmbed()
 			.setColor("#226666")
-			.setDescription("Le développeur du bot: **K A R I M**\nSite web: https://devhack.fr.nf\nHébergeur web: **Heroku**\nTwitter: https://twitter.com/karim_uchiwa")
+			.setDescription("Le développeur du bot: **K A R I M**\nSite web: https://devhack.fr.nf\nHébergeur: **Heroku**\nTwitter: https://twitter.com/karim_uchiwa")
 			.setFooter('A propos du bot')
 			message.channel.send(embed).catch(console.error)
 		
-	} else if(message.content.startsWith('quelqu\'un connait')) {
-		message.reply('Ca ne sert a rien de demander si quelqu\'un sait telle chose, expliquez clairement votre problème')
-	} else if(message.content.startsWith('quelqu\'un sait')) {
-		message.reply('Ca ne sert a rien de demander si quelqu\'un sait telle chose, expliquez clairement votre problème')
-	} else if(message.content.startsWith('vous savez')) {
-		message.reply('Ca ne sert a rien de demander si quelqu\'un sait telle chose, expliquez clairement votre problème')
-	}
+	} 
 	
 })
 
