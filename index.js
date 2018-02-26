@@ -94,7 +94,7 @@ bot.on('message', function(message) {
 		
 	} else if(message.content === 'd?online_members') {
 		  
-		setInterval (function (){ for (user of Bot.users){ message.channel.send(user[1].username + ' membres en ligne'); }  }, 10000);  
+		setInterval (function (){ for (user of bot.users){ message.channel.send(user[1].username + ' membres en ligne'); }  }, 10000);  
 		  
 	}
  	
