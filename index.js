@@ -49,7 +49,7 @@ bot.on('message', function(message) {
 
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
-		.addField('Statistiques du serveur DevHack', 'Il y a actuellement ' + '**' + message.guild.channels.size + '**' +' channels dans ce serveur \nIl y a exactement ' + '**' + message.guild.members.size + '**' + ' membres dans ce serveur\nLe serveur a été crée le: ' + '**' + moment(message.guild.createdAt).format('DD MMM YYYY') + '** \nJe suis present dans ' + '**' + bot.guilds.size + '**' + ' serveurs')
+		.addField('Statistiques du serveur DevHack', 'Il y a actuellement ' + '**' + message.guild.channels.size + '**' +' channels dans ce serveur \nIl y a exactement ' + '**' + message.guild.members.size + '**' + ' membres dans ce serveur\nLe serveur a été crée le: ' + '**' + moment(message.guild.createdAt).format('DD MMM YYYY').locale('fr') + '** \nJe suis present dans ' + '**' + bot.guilds.size + '**' + ' serveurs')
 		message.channel.send(embed).catch(console.error)
 	
 	}  else if(message.content === 'd?all_roles') {
