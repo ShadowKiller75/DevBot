@@ -5,7 +5,7 @@ const Blague = require('./commands/blague')
 const Role = require('./commands/role')
 const Whatis = require('./commands/whatis')
 const Docs = require('./commands/docs')
-const moment = require('moment.js')
+const moment = require('moment')
 
 
 
