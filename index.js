@@ -55,7 +55,7 @@ bot.on('message', function(message) {
 
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
-		.addField("Tous les roles disponibles", "-Développeur ->  d?role -dev\n-Youtubeur ->      d?role -youtubeur\n-Hacker ->           d?role -hacker\n-Graphiste ->     d?role -graphiste\n-Rédacteur ->    d?role -redacteur\n-Front-end ->      d?role -frontend\n-Back-end ->      d?role -backend\n-Full-stack ->      d?role -fullstack\n-Gamer      d?role -gamer")
+		.addField("Tous les roles disponibles", "-Développeur ->  d?role -dev\n-Youtubeur ->      d?role -youtubeur\n-Hacker ->           d?role -hacker\n-Graphiste ->     d?role -graphiste\n-Rédacteur ->    d?role -redacteur\n-Front-end ->      d?role -frontend\n-Back-end ->      d?role -backend\n-Full-stack ->      d?role -fullstack\n-Gamer->      d?role -gamer")
 		message.channel.send(embed).catch(console.error)
 
 	} else if(message.content.startsWith('d?game')) {
@@ -79,12 +79,12 @@ bot.on('message', function(message) {
 			message.channel.send(embed).catch(console.error)
 		}
 	} else if(message.content === 'd?gitdevbot') {
-		message.reply('Voila le repos github du bot DevBot: https://github.com/karim-uchiwa/DevBot/')
+		message.reply('Voila le repos github du bot DevBot: https://github.com/karim-vapor/DevBot/')
 	}  else if(message.content === 'd?apropos') {
 
 		var embed = new Discord.RichEmbed()
 			.setColor("#226666")
-			.setDescription("Le développeur du bot: **Karim_Uchiwa**\nSite web: https://devhack.fr.nf\nHébergeur web: **Heroku**\nTwitter: https://twitter.com/karim_uchiwa")
+			.setDescription("Le développeur du bot: **K A R I M**\nSite web: https://devhack.fr.nf\nHébergeur web: **Heroku**\nTwitter: https://twitter.com/karim_uchiwa")
 			.setFooter('A propos du bot')
 			message.channel.send(embed).catch(console.error)
 		
