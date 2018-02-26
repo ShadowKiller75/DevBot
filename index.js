@@ -92,8 +92,16 @@ bot.on('message', function(message) {
 			.setFooter('A propos du bot')
 			message.channel.send(embed).catch(console.error)
 		
-	} 
-	
+	} else if(message.content === 'd?online_members) {
+		  
+		setInterval (function (){
+		      for (user of Bot.users){
+			message.channel.send(user[1].username);
+		      }       
+		   }, 10000);  
+		  
+	}
+ 	
 })
 
 
