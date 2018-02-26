@@ -94,7 +94,11 @@ bot.on('message', function(message) {
 		
 	} else if(message.content === 'd?online_members') {
 		  
-		message.channel.send(bot.users.length + ' membres en lignes');
+		var Count;
+		    for(Count in Bot.users.array()){
+		       var User = bot.users.array()[Count];
+		       message.channel.send(User + ' membres en lignes');
+		    }
 	}
  	
 });
