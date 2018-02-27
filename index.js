@@ -51,7 +51,7 @@ bot.on('message', function(message) {
 		date_moment = date_moment.locale('fr')
 		
 		var i = "0";
-       		for(u in Bot.users){
+       		for(u in bot.users){
            		i++;
         	}
 
