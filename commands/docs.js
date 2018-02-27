@@ -12,7 +12,7 @@ module.exports = class Docs extends Command {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
-			.addField("Commandes pour consulter les docs des languages ci-dessous", "- d?doc -php\n- d?doc -js\n- d?doc -html/css")
+			.addField("Commandes pour consulter les docs des langages ci-dessous", "- d?doc -php\n- d?doc -js\n- d?doc -html/css")
 			.setFooter('Les meilleurs docs de Devbot')
 			message.channel.send(embed).catch(console.error)
 
@@ -20,7 +20,7 @@ module.exports = class Docs extends Command {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
-			.addField("Voici le(s) meilleur(s) documentations pour le language php", "PHP.net => http://php.net/manual/fr/")
+			.addField("Voici le(s) meilleur(s) documentations pour le langage php", "PHP.net => http://php.net/manual/fr/")
 			.setFooter('Les meilleurs docs de Devbot')
 			message.channel.send(embed).catch(console.error)
 
@@ -28,7 +28,7 @@ module.exports = class Docs extends Command {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
-			.addField("Voici le(s) meilleur(s) documentations pour le language js", "MDN Web Docs => https://developer.mozilla.org/fr/docs/Web/JavaScript\nDevDocs.io JS => http://devdocs.io/javascript/")
+			.addField("Voici le(s) meilleur(s) documentations pour le langage js", "MDN Web Docs => https://developer.mozilla.org/fr/docs/Web/JavaScript\nDevDocs.io JS => http://devdocs.io/javascript/")
 			.setFooter('Les meilleurs docs de Devbot')
 			message.channel.send(embed).catch(console.error)
 
@@ -36,10 +36,18 @@ module.exports = class Docs extends Command {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
-			.addField("Voici le(s) meilleur(s) documentations pour les languages html et css", "DevDocs.io \n (HTML) http://devdocs.io/html/\n (CSS) http://devdocs.io/html/")
+			.addField("Voici le(s) meilleur(s) documentations pour les langages html et css", "DevDocs.io \n (HTML) http://devdocs.io/html/\n (CSS) http://devdocs.io/html/")
 			.setFooter('Les meilleurs docs de Devbot')
 			message.channel.send(embed).catch(console.error)
 
+		} else if(message.content.startsWith('d?doc -python')) {
+		
+			var embed = new Discord.RichEmbed()
+			.setColor("#226666")
+			.addField("Voici le(s) meilleur(s) documentations pour le langage python", "Docs.python.org => https://docs.python.org/3.6/tutorial/index.html \n DevDocs.io => http://devdocs.io/python~3.6/ ")
+			.setFooter('Les meilleurs docs de Devbot')
+			message.channel.send(embed).catch(console.error)
+	
 		}
 
 	}
