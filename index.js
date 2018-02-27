@@ -10,14 +10,16 @@ const moment = require('moment')
 
 
 bot.on('ready', function() {
-	console.log('Bot connecté')
-	bot.user.setGame('coder du sale | d?help').catch(console.error)
-	
-	
 	var i = 0;
         for(u in bot.users){
            i++;
         }
+	
+	console.log('Bot connecté, nombre de membres connectés: ' + i)
+	bot.user.setGame('coder du sale | d?help').catch(console.error)
+	
+	
+	
 })
 
 
