@@ -11,10 +11,8 @@ var i = 0;
 
 bot.on('ready', function() {
 	
-        console.log(bot.users);
-	for(u in bot.users){
+	for(u in bot.users.username){
            i++;
-	console.log(i);
         }
 	console.log('Bot connecté')
 	bot.user.setGame('coder du sale | d?help').catch(console.error)
