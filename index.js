@@ -12,7 +12,9 @@ var i = 0;
 bot.on('ready', function() {
 
 	for(u in bot.users.array()){
-           i++;
+            if(u["precense"] == "online") {
+		i++;
+	    }
         }
 	console.log('Bot connecté')
 	bot.user.setGame('coder du sale | d?help').catch(console.error)
