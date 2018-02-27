@@ -6,16 +6,16 @@ const Role = require('./commands/role')
 const Whatis = require('./commands/whatis')
 const Docs = require('./commands/docs')
 const moment = require('moment')
-
+var i = 0;
 
 
 bot.on('ready', function() {
-	var i = 0;
+	
         for(u in bot.users){
            i++;
         }
 	
-	console.log('Bot connecté, nombre de membres connectés: ' + i)
+	console.log('Bot connecté')
 	bot.user.setGame('coder du sale | d?help').catch(console.error)
 	
 	
