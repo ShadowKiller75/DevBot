@@ -11,10 +11,11 @@ var i = 0;
 
 bot.on('ready', function() {
 	
-        for(u in bot.users){
+        console.log(bot.users);
+	for(u in bot.users){
            i++;
+	console.log(i);
         }
-	
 	console.log('Bot connecté')
 	bot.user.setGame('coder du sale | d?help').catch(console.error)
 	
@@ -23,7 +24,7 @@ bot.on('ready', function() {
 })
 
 
-//guildMemebrAdd
+//guildMemeberAdd
 bot.on('guildMemberAdd', function(member) {
 
 	member.guild.channels.find("name", "general").sendMessage(member.toString() + ' Bienvenue dans le serveur ' + '**' + member.guild.name + '**' + ' utilisez la commande d?all_roles pour les roles que vous souhaitez ajouter, *__n\'oubliez pas de lire le reglement__*');
