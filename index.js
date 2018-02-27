@@ -12,7 +12,7 @@ var i = 0;
 bot.on('ready', function() {
 
 	for(u in bot.users.array()){
-            if(u["precense"] == "online") {
+            if(u["presence"] == "online") {
 		i++;
 	    }
         }
