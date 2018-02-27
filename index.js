@@ -51,8 +51,9 @@ bot.on('message', function(message) {
 		date_moment = date_moment.locale('fr')
 		
 		var i = 0;
-       		for(i in bot.users){
+       		for(u in bot.users){
            		i++;
+			console.log(i)
         	}
 
 		var embed = new Discord.RichEmbed()
