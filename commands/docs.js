@@ -12,7 +12,7 @@ module.exports = class Docs extends Command {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
-			.addField("Commandes pour consulter les docs des langages ci-dessous", "- d?doc -php\n- d?doc -js\n- d?doc -html/css")
+			.addField("Commandes pour consulter les docs des langages ci-dessous", "- d?doc -php\n- d?doc -js\n- d?doc -html/css\n-d?doc -python")
 			.setFooter('Les meilleurs docs de Devbot')
 			message.channel.send(embed).catch(console.error)
 
