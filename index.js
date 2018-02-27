@@ -11,7 +11,7 @@ var i = 0;
 
 bot.on('ready', function() {
 
-	console.log(message.guild.members)
+
 	for(u in bot.users.array()){
             i++
         }
@@ -54,6 +54,8 @@ bot.on('message', function(message) {
 		message.channel.send(embed).catch(console.error)
 
 	} else if(message.content === 'd?stats') {
+		
+		console.log(message.guild.members)
 		
 		var date_moment = moment(message.guild.createdAt)
 		date_moment = date_moment.locale('fr')
