@@ -10,8 +10,8 @@ var i = 0;
 
 
 bot.on('ready', function() {
-	
-	for(u in bot.users.username){
+	console.log(bot.users.array())
+	for(u in bot.users){
            i++;
         }
 	console.log('Bot connecté')
