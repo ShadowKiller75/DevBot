@@ -11,10 +11,9 @@ var i = 0;
 
 bot.on('ready', function() {
 
+	console.log(message.guild.members)
 	for(u in bot.users.array()){
-            if(u["presence"] == "online") {
-		i++;
-	    }
+            i++
         }
 	console.log('Bot connecté')
 	bot.user.setGame('coder du sale | d?help').catch(console.error)
