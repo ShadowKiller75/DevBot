@@ -12,6 +12,12 @@ const moment = require('moment')
 bot.on('ready', function() {
 	console.log('Bot connecté')
 	bot.user.setGame('coder du sale | d?help').catch(console.error)
+	
+	
+	var i = 0;
+        for(u in bot.users){
+           i++;
+        }
 })
 
 
@@ -49,12 +55,6 @@ bot.on('message', function(message) {
 		
 		var date_moment = moment(message.guild.createdAt)
 		date_moment = date_moment.locale('fr')
-		
-		var i = 0;
-       		for(u in bot.users){
-           		i++;
-			console.log(i)
-        	}
 
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
