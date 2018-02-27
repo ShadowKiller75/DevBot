@@ -50,7 +50,7 @@ bot.on('message', function(message) {
 		var date_moment = moment(message.guild.createdAt)
 		date_moment = date_moment.locale('fr')
 		
-		var i = "0";
+		var i = 0;
        		for(u in bot.users){
            		i++;
         	}
